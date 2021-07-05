@@ -1,7 +1,7 @@
 ﻿
 namespace Win11Check
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -39,8 +39,10 @@ namespace Win11Check
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.labelCPU = new System.Windows.Forms.Label();
-            this.buttonCheck = new System.Windows.Forms.Button();
             this.labelRam = new System.Windows.Forms.Label();
+            this.labelStorage = new System.Windows.Forms.Label();
+            this.buttonCheck = new System.Windows.Forms.Button();
+            this.labelFirm = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@ namespace Win11Check
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
@@ -70,6 +72,8 @@ namespace Win11Check
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.labelCPU, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelRam, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelStorage, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelFirm, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(87, 148);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(2);
@@ -94,7 +98,7 @@ namespace Win11Check
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(6, 290);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 39);
+            this.label8.Size = new System.Drawing.Size(153, 39);
             this.label8.TabIndex = 6;
             this.label8.Text = "Display :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,7 +112,7 @@ namespace Win11Check
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 38);
+            this.label2.Size = new System.Drawing.Size(153, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "Processor :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,7 +127,7 @@ namespace Win11Check
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(6, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 53);
+            this.label3.Size = new System.Drawing.Size(153, 53);
             this.label3.TabIndex = 1;
             this.label3.Text = "RAM :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +141,9 @@ namespace Win11Check
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(6, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 49);
+            this.label4.Size = new System.Drawing.Size(153, 49);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Storage :";
+            this.label4.Text = "Storage (OS Drive) :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -151,7 +155,7 @@ namespace Win11Check
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(6, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 51);
+            this.label5.Size = new System.Drawing.Size(153, 51);
             this.label5.TabIndex = 3;
             this.label5.Text = "System Firmware :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,7 +169,7 @@ namespace Win11Check
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(6, 198);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 42);
+            this.label6.Size = new System.Drawing.Size(153, 42);
             this.label6.TabIndex = 4;
             this.label6.Text = "TPM :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,7 +183,7 @@ namespace Win11Check
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(6, 241);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 48);
+            this.label7.Size = new System.Drawing.Size(153, 48);
             this.label7.TabIndex = 5;
             this.label7.Text = "Graphics card :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,12 +195,40 @@ namespace Win11Check
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCPU.AutoSize = true;
             this.labelCPU.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCPU.Location = new System.Drawing.Point(155, 3);
+            this.labelCPU.Location = new System.Drawing.Point(166, 3);
             this.labelCPU.Name = "labelCPU";
-            this.labelCPU.Size = new System.Drawing.Size(416, 38);
+            this.labelCPU.Size = new System.Drawing.Size(402, 38);
             this.labelCPU.TabIndex = 7;
             this.labelCPU.Text = "CPU";
             this.labelCPU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRam
+            // 
+            this.labelRam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRam.AutoSize = true;
+            this.labelRam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRam.Location = new System.Drawing.Point(166, 42);
+            this.labelRam.Name = "labelRam";
+            this.labelRam.Size = new System.Drawing.Size(402, 53);
+            this.labelRam.TabIndex = 8;
+            this.labelRam.Text = "RAM";
+            this.labelRam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelStorage
+            // 
+            this.labelStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStorage.AutoSize = true;
+            this.labelStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelStorage.Location = new System.Drawing.Point(166, 96);
+            this.labelStorage.Name = "labelStorage";
+            this.labelStorage.Size = new System.Drawing.Size(402, 49);
+            this.labelStorage.TabIndex = 9;
+            this.labelStorage.Text = "Storage";
+            this.labelStorage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonCheck
             // 
@@ -209,21 +241,21 @@ namespace Win11Check
             this.buttonCheck.UseVisualStyleBackColor = true;
             this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
-            // labelRam
+            // labelFirm
             // 
-            this.labelRam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelFirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRam.AutoSize = true;
-            this.labelRam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRam.Location = new System.Drawing.Point(155, 42);
-            this.labelRam.Name = "labelRam";
-            this.labelRam.Size = new System.Drawing.Size(416, 53);
-            this.labelRam.TabIndex = 8;
-            this.labelRam.Text = "RAM";
-            this.labelRam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelFirm.AutoSize = true;
+            this.labelFirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFirm.Location = new System.Drawing.Point(166, 146);
+            this.labelFirm.Name = "labelFirm";
+            this.labelFirm.Size = new System.Drawing.Size(402, 51);
+            this.labelFirm.TabIndex = 10;
+            this.labelFirm.Text = "Firmware";
+            this.labelFirm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,7 +264,7 @@ namespace Win11Check
             this.Controls.Add(this.buttonCheck);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "Windows 11 Check";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -254,6 +286,8 @@ namespace Win11Check
         private System.Windows.Forms.Label labelCPU;
         private System.Windows.Forms.Button buttonCheck;
         private System.Windows.Forms.Label labelRam;
+        private System.Windows.Forms.Label labelStorage;
+        private System.Windows.Forms.Label labelFirm;
     }
 }
 
