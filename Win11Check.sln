@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win11Check", "Win11Check\Win11Check.csproj", "{B08BE494-8566-4BFF-8F11-41208E97295F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win11Check", "Win11Check\Win11Check.csproj", "{B08BE494-8566-4BFF-8F11-41208E97295F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

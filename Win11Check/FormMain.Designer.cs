@@ -47,8 +47,10 @@ namespace Win11Check
             this.labelScreen = new System.Windows.Forms.Label();
             this.pictureBoxCPU = new System.Windows.Forms.PictureBox();
             this.buttonCheck = new System.Windows.Forms.Button();
+            this.pictureBoxRam = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +69,7 @@ namespace Win11Check
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
@@ -83,13 +85,14 @@ namespace Win11Check
             this.tableLayoutPanel1.Controls.Add(this.labelGpu, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.labelScreen, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxCPU, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxRam, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(87, 148);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.25352F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.74648F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.47368F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.52632F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
@@ -121,7 +124,7 @@ namespace Win11Check
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(6, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 38);
+            this.label2.Size = new System.Drawing.Size(153, 46);
             this.label2.TabIndex = 0;
             this.label2.Text = "Processor :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,9 +137,9 @@ namespace Win11Check
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(6, 42);
+            this.label3.Location = new System.Drawing.Point(6, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 53);
+            this.label3.Size = new System.Drawing.Size(153, 47);
             this.label3.TabIndex = 1;
             this.label3.Text = "RAM :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,9 +151,9 @@ namespace Win11Check
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(6, 96);
+            this.label4.Location = new System.Drawing.Point(6, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 49);
+            this.label4.Size = new System.Drawing.Size(153, 47);
             this.label4.TabIndex = 2;
             this.label4.Text = "Storage (OS Drive) :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,7 +209,7 @@ namespace Win11Check
             this.labelCPU.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCPU.Location = new System.Drawing.Point(166, 3);
             this.labelCPU.Name = "labelCPU";
-            this.labelCPU.Size = new System.Drawing.Size(397, 38);
+            this.labelCPU.Size = new System.Drawing.Size(396, 46);
             this.labelCPU.TabIndex = 7;
             this.labelCPU.Text = "CPU";
             this.labelCPU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,9 +221,9 @@ namespace Win11Check
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRam.AutoSize = true;
             this.labelRam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRam.Location = new System.Drawing.Point(166, 42);
+            this.labelRam.Location = new System.Drawing.Point(166, 50);
             this.labelRam.Name = "labelRam";
-            this.labelRam.Size = new System.Drawing.Size(397, 53);
+            this.labelRam.Size = new System.Drawing.Size(396, 47);
             this.labelRam.TabIndex = 8;
             this.labelRam.Text = "RAM";
             this.labelRam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,9 +235,9 @@ namespace Win11Check
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStorage.AutoSize = true;
             this.labelStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelStorage.Location = new System.Drawing.Point(166, 96);
+            this.labelStorage.Location = new System.Drawing.Point(166, 98);
             this.labelStorage.Name = "labelStorage";
-            this.labelStorage.Size = new System.Drawing.Size(397, 49);
+            this.labelStorage.Size = new System.Drawing.Size(396, 47);
             this.labelStorage.TabIndex = 9;
             this.labelStorage.Text = "Storage";
             this.labelStorage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,7 +251,7 @@ namespace Win11Check
             this.labelFirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelFirm.Location = new System.Drawing.Point(166, 146);
             this.labelFirm.Name = "labelFirm";
-            this.labelFirm.Size = new System.Drawing.Size(397, 51);
+            this.labelFirm.Size = new System.Drawing.Size(396, 51);
             this.labelFirm.TabIndex = 10;
             this.labelFirm.Text = "Firmware";
             this.labelFirm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,7 +265,7 @@ namespace Win11Check
             this.labelTpm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTpm.Location = new System.Drawing.Point(166, 198);
             this.labelTpm.Name = "labelTpm";
-            this.labelTpm.Size = new System.Drawing.Size(397, 42);
+            this.labelTpm.Size = new System.Drawing.Size(396, 42);
             this.labelTpm.TabIndex = 11;
             this.labelTpm.Text = "TPM";
             this.labelTpm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,7 +279,7 @@ namespace Win11Check
             this.labelGpu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelGpu.Location = new System.Drawing.Point(166, 241);
             this.labelGpu.Name = "labelGpu";
-            this.labelGpu.Size = new System.Drawing.Size(397, 48);
+            this.labelGpu.Size = new System.Drawing.Size(396, 48);
             this.labelGpu.TabIndex = 12;
             this.labelGpu.Text = "GPU";
             this.labelGpu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -290,14 +293,14 @@ namespace Win11Check
             this.labelScreen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelScreen.Location = new System.Drawing.Point(166, 290);
             this.labelScreen.Name = "labelScreen";
-            this.labelScreen.Size = new System.Drawing.Size(397, 39);
+            this.labelScreen.Size = new System.Drawing.Size(396, 39);
             this.labelScreen.TabIndex = 13;
             this.labelScreen.Text = "Screen";
             this.labelScreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxCPU
             // 
-            this.pictureBoxCPU.Location = new System.Drawing.Point(570, 6);
+            this.pictureBoxCPU.Location = new System.Drawing.Point(569, 6);
             this.pictureBoxCPU.Name = "pictureBoxCPU";
             this.pictureBoxCPU.Size = new System.Drawing.Size(47, 32);
             this.pictureBoxCPU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,6 +318,15 @@ namespace Win11Check
             this.buttonCheck.UseVisualStyleBackColor = true;
             this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
+            // pictureBoxRam
+            // 
+            this.pictureBoxRam.Location = new System.Drawing.Point(569, 53);
+            this.pictureBoxRam.Name = "pictureBoxRam";
+            this.pictureBoxRam.Size = new System.Drawing.Size(47, 32);
+            this.pictureBoxRam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxRam.TabIndex = 15;
+            this.pictureBoxRam.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -329,6 +341,7 @@ namespace Win11Check
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,6 +366,7 @@ namespace Win11Check
         private System.Windows.Forms.Label labelGpu;
         private System.Windows.Forms.Label labelScreen;
         private System.Windows.Forms.PictureBox pictureBoxCPU;
+        private System.Windows.Forms.PictureBox pictureBoxRam;
     }
 }
 

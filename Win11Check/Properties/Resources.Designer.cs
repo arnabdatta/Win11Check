@@ -63,36 +63,6 @@ namespace Win11Check.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _0405_46_complete {
-            get {
-                object obj = ResourceManager.GetObject("0405-46_complete", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _0405_47_stop {
-            get {
-                object obj = ResourceManager.GetObject("0405-47_stop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _0405_48_warning {
-            get {
-                object obj = ResourceManager.GetObject("0405-48_warning", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap complete {
             get {
                 object obj = ResourceManager.GetObject("complete", resourceCulture);

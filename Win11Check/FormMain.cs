@@ -40,15 +40,29 @@ namespace Win11Check
                 {
                     pictureBoxCPU.Image = Properties.Resources.complete;
                 }
+                else
+                {
+                    pictureBoxCPU.Image = Properties.Resources.stop;
+                }
             }
 
 
             //RAM
+            double totalRam = 0;
             ManagementObjectSearcher Search = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem");
             foreach (ManagementObject Mobject in Search.Get())
             {
-                double totalRam = Math.Round(Convert.ToDouble(Mobject["TotalPhysicalMemory"]) / (1024 * 1024 * 1024));
+                totalRam = Math.Round(Convert.ToDouble(Mobject["TotalPhysicalMemory"]) / (1024 * 1024 * 1024));
                 labelRam.Text = String.Format("{0} GB", totalRam);
+            }
+
+            if (totalRam >= 8.0)
+            {
+                pictureBoxRam.Image = Properties.Resources.complete;
+            }
+            else
+            {
+                pictureBoxRam.Image = Properties.Resources.stop;
             }
 
             //Drive
